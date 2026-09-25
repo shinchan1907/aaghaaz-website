@@ -52,7 +52,7 @@
       if (!ok) return;
       var subject = encodeURIComponent("Website enquiry from " + name);
       var body = encodeURIComponent(message + "\n\n— " + name + " (" + email + ")");
-      window.location.href = "mailto:aaghaazbegin@gmail.com?subject=" + subject + "&body=" + body;
+      window.location.href = "mailto:contact@aaghaaz.org.in?subject=" + subject + "&body=" + body;
     });
   }
 })();

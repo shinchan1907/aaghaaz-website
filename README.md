@@ -43,8 +43,8 @@ output directory `/` (or the folder name).
 ## Notes
 
 - All copy is truthful to the NGO's published content — no invented statistics.
-- The **Donate** buttons open a pre-addressed email to `aaghaazbegin@gmail.com`
+- The **Donate** buttons open a pre-addressed email to `contact@aaghaaz.org.in`
   because the NGO has no online payment link yet. When one exists, replace the
   `mailto:` hrefs with the payment URL.
 - Contact details: 96, Guru Ravidass Nagar, Jalandhar, Punjab 144003 ·
-  +91 181 501 0011 · aaghaazbegin@gmail.com · facebook.com/ouraaghaaz
+  +91 181 501 0011 · contact@aaghaaz.org.in · facebook.com/ouraaghaaz
