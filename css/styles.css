@@ -298,6 +298,14 @@ h3{font-size:1.35rem}
 .value h3{font-size:1.12rem;margin-bottom:.5rem;color:var(--maroon)}
 .value p{color:var(--ink-soft);font-size:.95rem}
 
+/* ---------- moments gallery ---------- */
+.moments{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.6rem}
+.moments figure{background:#fff;border:1px solid rgba(255,173,238,.5);border-radius:var(--r-sm);
+  overflow:hidden;box-shadow:0 14px 40px -22px rgba(146,0,58,.22);transition:transform .25s,box-shadow .25s}
+.moments figure:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.moments img{aspect-ratio:4/3;object-fit:cover;width:100%;display:block}
+.moments figcaption{padding:1rem 1.2rem;font-weight:700;font-size:.92rem;color:var(--ink-soft)}
+
 /* ============ journey steps (home preview) ============ */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
 .step{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,173,238,.5);
@@ -381,6 +389,7 @@ h3{font-size:1.35rem}
   .steps{grid-template-columns:1fr;max-width:34rem;margin-inline:auto}
   .values,.ways{grid-template-columns:1fr;max-width:34rem;margin-inline:auto}
   .values{margin-top:2.4rem}
+  .moments{grid-template-columns:repeat(2,1fr)}
   .contact-layout{grid-template-columns:1fr}
 }
 @media (max-width:640px){
