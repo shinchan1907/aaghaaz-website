@@ -1,66 +1,50 @@
-# Aaghaaz – A Beginning · Website
+# Aaghaaz – A Beginning — Website v2
 
-A complete, immersive single-site build for **Aaghaaz – A Beginning**, a non-profit
-organisation based in Jalandhar, Punjab, working for the betterment of
-less-privileged women through vocational training, the Aaghaaz Boutique and the
-Aaghaaz Magazine.
+Modern, blazing-fast static website for **Aaghaaz – A Beginning**, a non-profit
+organisation in Jalandhar, Punjab, empowering less-privileged women through
+vocational training (stitching, English-speaking, beautification), the Aaghaaz
+Boutique, and the annual Aaghaaz Magazine.
 
-## Tech
+## Stack
 
-Vanilla **HTML + CSS + JS only — no build step, no frameworks**. The site runs
-as-is on any static host.
-
-- Display type: **Fraunces** (Google Fonts), body: **Manrope**
-- Palette: logo magenta `#A02080`, warm ivory `#FAF5EC`, deep plum `#2B0F26`,
-  gold accent `#C99B4A`
-- Full-screen parallax hero, scroll-reveal animations (IntersectionObserver),
-  sticky nav with scroll state + mobile menu, active-section highlighting,
-  embedded Google Map (no API key needed)
-- Responsive: desktop → tablet → mobile; `prefers-reduced-motion` respected
+Vanilla HTML + CSS + JS. Zero frameworks, zero icon libraries (inline SVG only).
+Google Fonts (Fraunces + Manrope) via `preconnect` + `display=swap`.
 
 ## Structure
 
 ```
-website/
-├── index.html          # all sections
-├── css/
-│   └── styles.css      # design system + responsive
-├── js/
-│   └── main.js         # nav, reveal, parallax, scroll-spy
-└── assets/
-    ├── logo.png        # organisation logo
-    └── img/
-        ├── hero.jpg        # hero — tailoring classroom
-        ├── stitching.jpg   # vocational training card
-        ├── beautician.jpg  # beautician training
-        ├── english.jpg     # English-speaking class
-        ├── boutique.jpg    # boutique band + card
-        └── celebration.jpg # our story / community
+index.html          — all content sections
+css/styles.css      — single stylesheet
+js/main.js          — <4KB: menu, reveals, scroll-spy, parallax, back-to-top
+assets/logo.png     — organisation logo
+assets/img/         — generated imagery (hero, programs, illustrations, texture)
+_headers            — Cloudflare Pages cache headers
 ```
 
-Sections: Hero → Our Story → Programs (3 cards + training focus) →
-Boutique → Magazine → Voices (Audre Lorde quote) → Get Involved
-(Volunteer + Donate) → Contact → Footer.
+## Performance
 
-## Deploy on GitHub Pages
+- One CSS file, one JS file, no build step
+- `loading="lazy"` + `decoding="async"` on below-fold images, explicit
+  `width`/`height` (no layout shift), `fetchpriority="high"` on the hero
+- `_headers` sets immutable 1-year caching for `/assets/*`, revalidation for HTML
+- `prefers-reduced-motion` respected throughout
 
-1. Create a new repo (e.g. `aaghaaz-website`) and push this folder's contents
-   to the repo root.
-2. Repo → **Settings → Pages** → Source: *Deploy from a branch* →
-   branch `main`, folder `/ (root)` → Save.
-3. The site goes live at `https://<username>.github.io/aaghaaz-website/`.
+## Deploy on Cloudflare Pages
 
-No build command or output directory is needed.
+**Option A — drag & drop:** Cloudflare dashboard → Workers & Pages → Create →
+Pages → Upload assets → drop this folder. Done.
 
-## Content honesty
+**Option B — git:** push this folder to a repo, then Pages → Connect to Git →
+pick the repo → build settings: framework preset `None`, build command empty,
+output directory `/` (or the folder name).
 
-All copy is drawn from the organisation's own site and Facebook page. No
-impact statistics are claimed anywhere on the site. The "Donate Now!" button
-opens a pre-addressed email to the organisation (`aaghaazbegin@gmail.com`);
-wire it to a payment link if/when the NGO provides one.
+**Option C — wrangler:** `npx wrangler pages deploy . --project-name=aaghaaz`
 
-## Contact (as published by the organisation)
+## Notes
 
-96, Guru Ravidass Nagar, Jalandhar, Punjab 144003, India ·
-+91 181 501 0011 · aaghaazbegin@gmail.com ·
-[facebook.com/ouraaghaaz](https://www.facebook.com/ouraaghaaz)
+- All copy is truthful to the NGO's published content — no invented statistics.
+- The **Donate** buttons open a pre-addressed email to `aaghaazbegin@gmail.com`
+  because the NGO has no online payment link yet. When one exists, replace the
+  `mailto:` hrefs with the payment URL.
+- Contact details: 96, Guru Ravidass Nagar, Jalandhar, Punjab 144003 ·
+  +91 181 501 0011 · aaghaazbegin@gmail.com · facebook.com/ouraaghaaz

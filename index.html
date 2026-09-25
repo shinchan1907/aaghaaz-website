@@ -1,269 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aaghaaz – A Beginning | Empowering Women in Jalandhar</title>
-  <meta name="description" content="Aaghaaz – A Beginning is a non-profit organisation in Jalandhar, Punjab, working for the betterment of less-privileged women through vocational training, the Aaghaaz Boutique and the Aaghaaz Magazine." />
-  <link rel="icon" type="image/png" href="assets/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aaghaaz – A Beginning | Empowering Women in Jalandhar, Punjab</title>
+<meta name="description" content="Aaghaaz – A Beginning is a non-profit organisation in Jalandhar, Punjab, empowering less-privileged women through training in stitching, English-speaking and beautification — towards independence and dignity.">
+<meta name="theme-color" content="#92003A">
+<meta property="og:title" content="Aaghaaz – A Beginning | Empowering Women in Jalandhar, Punjab">
+<meta property="og:description" content="Professional training for less-privileged women — towards independence, dignity, and the power to support their families.">
+<meta property="og:image" content="assets/img/hero.jpg">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ============ NAV ============ -->
-  <header class="nav" id="nav">
-    <div class="nav-inner">
-      <a class="brand" href="#home" aria-label="Aaghaaz – A Beginning, home">
-        <span class="brand-badge"><img src="assets/logo.png" alt="Aaghaaz – A Beginning logo" /></span>
-        <span class="brand-text">Aaghaaz <em>– A Beginning</em></span>
-      </a>
-      <nav class="nav-links" id="navLinks" aria-label="Primary">
-        <a href="#story">Our Story</a>
-        <a href="#programs">Programs</a>
-        <a href="#boutique">Boutique</a>
-        <a href="#magazine">Magazine</a>
-        <a href="#involved">Get Involved</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="btn btn-primary btn-sm" href="#involved">Donate</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Aaghaaz – A Beginning, home">
+      <img src="assets/logo.png" alt="Aaghaaz – A Beginning logo" width="96" height="96">
+      <span class="brand-text">Aaghaaz <em>– A Beginning</em></span>
+    </a>
+    <nav class="links" id="navLinks" aria-label="Primary">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-pink btn-sm nav-cta" href="mailto:aaghaazbegin@gmail.com?subject=Donation%20for%20Aaghaaz%20%E2%80%93%20A%20Beginning">Donate</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true">
+    <img width="1600" height="1066" src="assets/img/hero.jpg" alt="" fetchpriority="high" decoding="async">
+  </div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="mesh" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+  <div class="wrap hero-inner">
+    <p class="sticker sticker-1 reveal">Non-profit &bull; Jalandhar, Punjab</p>
+    <h1 id="heroTitle" class="reveal">Every woman deserves <span class="hl">a&nbsp;beginning.</span></h1>
+    <p class="lede reveal">Aaghaaz – A Beginning works for the betterment of less-privileged women — professional training in stitching, English-speaking and beautification that leads to independence, dignity, and the power to support their families.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-pink magnet" href="#journey">Follow the journey</a>
+      <a class="btn btn-ghost magnet" href="mailto:aaghaazbegin@gmail.com?subject=Donation%20for%20Aaghaaz%20%E2%80%93%20A%20Beginning">Donate</a>
     </div>
-  </header>
+  </div>
+  <a class="scroll-hint" href="#mission" aria-label="Scroll to our mission">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</section>
 
-  <main id="main">
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="home">
-      <div class="hero-bg" id="heroBg" role="img" aria-label="Women learning tailoring in a bright classroom"></div>
-      <div class="hero-veil"></div>
-      <div class="hero-content">
-        <p class="eyebrow reveal">A non-profit organisation &middot; Jalandhar, Punjab</p>
-        <h1 class="reveal">A new <em>beginning</em><br />for every woman.</h1>
-        <p class="lede reveal">Aaghaaz &ndash; A Beginning works for the betterment of less-privileged women &mdash; providing different forms of training, and helping them become independent and support their families.</p>
-        <div class="hero-cta reveal">
-          <a class="btn btn-primary" href="#programs">Explore our programs</a>
-          <a class="btn btn-ghost" href="#involved">Get involved</a>
-        </div>
-      </div>
-      <a class="scroll-hint" href="#story" aria-label="Scroll to Our Story">
-        <span></span>
-      </a>
-    </section>
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Stitching</span><i>&#10022;</i><span>Spoken English</span><i>&#10022;</i><span>Beautification</span><i>&#10022;</i><span>Aaghaaz Boutique</span><i>&#10022;</i><span>Aaghaaz Magazine</span><i>&#10022;</i><span>Volunteer</span><i>&#10022;</i><span>Donate</span><i>&#10022;</i>
+    <span>Stitching</span><i>&#10022;</i><span>Spoken English</span><i>&#10022;</i><span>Beautification</span><i>&#10022;</i><span>Aaghaaz Boutique</span><i>&#10022;</i><span>Aaghaaz Magazine</span><i>&#10022;</i><span>Volunteer</span><i>&#10022;</i><span>Donate</span><i>&#10022;</i>
+  </div>
+</div>
 
-    <!-- ============ OUR STORY ============ -->
-    <section class="section story" id="story">
-      <div class="wrap story-grid">
-        <div class="story-copy">
-          <p class="kicker reveal">Our Story</p>
-          <h2 class="reveal">Driven by a single goal &mdash; <em>to empower women</em> to initiate personal and social change.</h2>
-          <p class="reveal">Aaghaaz &ndash; A Beginning is a non-profit organisation based in Jalandhar, Punjab. We work for the betterment of less-privileged women by providing them different forms of training and helping them to become independent and support their families.</p>
-          <p class="reveal">From the classroom to the boutique to the printed page, everything we do is built around one belief: when a woman earns, a family rises &mdash; and a community changes.</p>
-          <p class="founder reveal">Founded by <strong>Nidhi Kohli</strong></p>
-        </div>
-        <figure class="story-media reveal">
-          <img src="assets/img/celebration.jpg" alt="Women of the Aaghaaz community celebrating together, holding garments they made" loading="lazy" />
-          <figcaption>Our community &mdash; every garment tells a story of independence.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ============ PROGRAMS ============ -->
-    <section class="section programs" id="programs">
-      <div class="wrap">
-        <p class="kicker reveal">What we do</p>
-        <h2 class="reveal">Programs that open <em>doors</em></h2>
-        <p class="section-sub reveal">Three paths, one destination &mdash; independence.</p>
-
-        <div class="cards">
-          <article class="card reveal">
-            <div class="card-media"><img src="assets/img/stitching.jpg" alt="Hands guiding fabric through a sewing machine during stitching training" loading="lazy" /></div>
-            <div class="card-body">
-              <h3>Vocational Training</h3>
-              <p>Training in <strong>stitching</strong>, <strong>English-speaking</strong> and <strong>beautification</strong> &mdash; teaching girls employable skills that lead to employment and financial independence.</p>
-            </div>
-          </article>
-          <article class="card reveal">
-            <div class="card-media"><img src="assets/img/boutique.jpg" alt="Colourful garments on a rack inside the Aaghaaz Boutique" loading="lazy" /></div>
-            <div class="card-body">
-              <h3>Aaghaaz Boutique</h3>
-              <p>Our alumni are employed using their designing and stitching skills &mdash; crafting beautiful clothes for women, and turning creativity into livelihood.</p>
-            </div>
-          </article>
-          <article class="card reveal card-magazine">
-            <div class="card-media magazine-cover" aria-hidden="true">
-              <span class="mc-masthead">Aaghaaz</span>
-              <span class="mc-edition">Annual Magazine</span>
-              <span class="mc-lines"><i></i><i></i><i></i><i></i></span>
-            </div>
-            <div class="card-body">
-              <h3>Aaghaaz Magazine</h3>
-              <p>Our annual magazine celebrates the achievements of our women &mdash; while honestly questioning the gender biases that hold them back.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Training in focus -->
-        <div class="focus">
-          <div class="focus-copy">
-            <p class="kicker reveal">Training in focus</p>
-            <h3 class="reveal">Three skills. Countless new beginnings.</h3>
-            <ul class="skill-list">
-              <li class="reveal"><strong>Stitching</strong><span>From first seam to finished garment &mdash; a trade she owns for life.</span></li>
-              <li class="reveal"><strong>English-speaking</strong><span>The confidence to speak, apply, interview &mdash; and be heard.</span></li>
-              <li class="reveal"><strong>Beautification</strong><span>Professional beauty skills that open doors to salons and self-employment.</span></li>
-            </ul>
-          </div>
-          <div class="focus-media">
-            <img class="reveal" src="assets/img/english.jpg" alt="Women learning in an English-speaking class" loading="lazy" />
-            <img class="reveal" src="assets/img/beautician.jpg" alt="Beautician skills training session" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ BOUTIQUE ============ -->
-    <section class="band" id="boutique">
-      <div class="band-bg" role="img" aria-label="Inside the Aaghaaz Boutique"></div>
-      <div class="band-veil"></div>
-      <div class="wrap band-content">
-        <p class="kicker kicker-light reveal">Aaghaaz Boutique</p>
-        <h2 class="reveal">Designed &amp; stitched <em>by our alumni.</em></h2>
-        <p class="reveal">Women trained at Aaghaaz are employed in our boutique, using their designing and stitching skills to create beautiful clothes for women &mdash; every garment carries a story of independence.</p>
-      </div>
-    </section>
-
-    <!-- ============ MAGAZINE ============ -->
-    <section class="section magazine" id="magazine">
-      <div class="wrap mag-grid">
-        <div class="mag-cover reveal" aria-hidden="true">
-          <span class="mag-masthead">Aaghaaz</span>
-          <span class="mag-tag">A Beginning &middot; Annual</span>
-          <span class="mag-art"></span>
-          <span class="mag-lines"><i></i><i></i><i></i><i></i><i></i></span>
-        </div>
-        <div class="mag-copy">
-          <p class="kicker reveal">Aaghaaz Magazine</p>
-          <h2 class="reveal">In print, <em>their voices.</em></h2>
-          <p class="reveal">Once a year, we publish the Aaghaaz Magazine &mdash; a celebration of what our women have achieved, and an honest questioning of the gender biases they continue to face.</p>
-          <p class="reveal">It is part yearbook, part mirror: proof of how far training and determination can carry a woman, and a reminder of how far society still has to go.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ VOICES / QUOTE ============ -->
-    <section class="quote" id="voices">
-      <div class="wrap">
-        <span class="quote-mark reveal" aria-hidden="true">&ldquo;</span>
-        <blockquote class="reveal">
-          <p>I am not free while any woman is unfree, even when her shackles are very different from my own.</p>
-          <cite>&mdash; Audre Lorde</cite>
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- ============ GET INVOLVED ============ -->
-    <section class="section involved" id="involved">
-      <div class="wrap">
-        <p class="kicker reveal">Get involved</p>
-        <h2 class="reveal">Begin <em>with us.</em></h2>
-        <p class="section-sub reveal">Aaghaaz grows because people show up &mdash; with their time, their skills, and their generosity.</p>
-        <div class="involve-grid">
-          <article class="involve-card reveal">
-            <h3>Volunteer</h3>
-            <p>Teach, mentor, organise, create &mdash; there is a place for every skill in our classrooms and our community.</p>
-            <p class="involve-note">Contact us to become a part of our team.</p>
-            <a class="btn btn-primary" href="#contact">Contact us</a>
-          </article>
-          <article class="involve-card involve-donate reveal">
-            <h3>Donate</h3>
-            <p>Your contribution goes directly into training &mdash; machines, materials, classrooms &mdash; and into the women who fill them.</p>
-            <p class="involve-note">Every rupee becomes a skill. Every skill becomes independence.</p>
-            <a class="btn btn-light" href="mailto:aaghaazbegin@gmail.com?subject=Donation%20to%20Aaghaaz%20%E2%80%93%20A%20Beginning">Donate Now!</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="section contact" id="contact">
-      <div class="wrap">
-        <p class="kicker reveal">Contact</p>
-        <h2 class="reveal">Come, <em>say hello.</em></h2>
-        <div class="contact-grid">
-          <div class="contact-info">
-            <div class="contact-row reveal">
-              <span class="contact-icon" aria-hidden="true">&#9673;</span>
-              <div>
-                <h3>Visit us</h3>
-                <p>96, Guru Ravidass Nagar,<br />Jalandhar, Punjab 144003, India</p>
-              </div>
-            </div>
-            <div class="contact-row reveal">
-              <span class="contact-icon" aria-hidden="true">&#9742;</span>
-              <div>
-                <h3>Call us</h3>
-                <p><a href="tel:+911815010011">+91 181 501 0011</a></p>
-              </div>
-            </div>
-            <div class="contact-row reveal">
-              <span class="contact-icon" aria-hidden="true">&#9993;</span>
-              <div>
-                <h3>Write to us</h3>
-                <p><a href="mailto:aaghaazbegin@gmail.com">aaghaazbegin@gmail.com</a></p>
-              </div>
-            </div>
-            <div class="contact-row reveal">
-              <span class="contact-icon" aria-hidden="true">&#9733;</span>
-              <div>
-                <h3>Follow us</h3>
-                <p><a href="https://www.facebook.com/ouraaghaaz" target="_blank" rel="noopener">facebook.com/ouraaghaaz</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="contact-map reveal">
-            <iframe title="Map &mdash; Aaghaaz, Guru Ravidass Nagar, Jalandhar" src="https://maps.google.com/maps?q=Guru%20Ravidass%20Nagar%2C%20Jalandhar%2C%20Punjab%20144003&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Guru+Ravidass+Nagar+Jalandhar+Punjab+144003" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <span class="brand-badge"><img src="assets/logo.png" alt="Aaghaaz – A Beginning logo" /></span>
-        <p class="footer-name">Aaghaaz &ndash; A Beginning</p>
-        <p class="footer-tag">Empowering women, transforming lives.</p>
-      </div>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="#story">Our Story</a>
-        <a href="#programs">Programs</a>
-        <a href="#boutique">Boutique</a>
-        <a href="#magazine">Magazine</a>
-        <a href="#involved">Get Involved</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="footer-contact">
-        <p>96, Guru Ravidass Nagar, Jalandhar, Punjab 144003</p>
-        <p><a href="tel:+911815010011">+91 181 501 0011</a> &middot; <a href="mailto:aaghaazbegin@gmail.com">aaghaazbegin@gmail.com</a></p>
-        <p>Founded by Nidhi Kohli</p>
-      </div>
+<!-- ============ MISSION TEASER ============ -->
+<section class="section" id="mission">
+  <div class="wrap">
+    <div class="sec-head center">
+      <p class="kicker reveal">Our mission</p>
+      <h2 class="reveal" style="--d:.08s">A single goal: women who<br>shape <span class="hl">their own change</span>.</h2>
+      <p class="sub reveal" style="--d:.14s">Here at Aaghaaz, we are driven by a single goal — to empower women to initiate personal and social change, and to do our part in making the world a better place for all.</p>
+      <p class="reveal" style="--d:.2s; margin-top:1.8rem"><a class="btn btn-dark magnet" href="about.html">Read our story</a></p>
     </div>
-    <div class="wrap footer-base">
-      <p>&copy; <span id="year">2026</span> Aaghaaz &ndash; A Beginning. A non-profit organisation.</p>
-      <p>Made with care in Jalandhar, Punjab.</p>
-    </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="js/main.js"></script>
+<!-- ============ JOURNEY PREVIEW ============ -->
+<section class="section tint" id="journey">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker reveal">The journey</p>
+      <h2 class="reveal" style="--d:.08s">Three steps. One <span class="hl">beginning</span>.</h2>
+      <p class="sub reveal" style="--d:.14s">This is how change happens at Aaghaaz — a path our women walk, from their first lesson to earning with dignity.</p>
+    </div>
+    <div class="steps">
+      <article class="step reveal">
+        <div class="step-media"><img width="1200" height="800" src="assets/img/stitching.jpg" alt="Hands guiding fabric through a sewing machine during training" loading="lazy" decoding="async"></div>
+        <div class="step-body">
+          <span class="jnum">01</span>
+          <h3>Learn</h3>
+          <p>Professional training in <strong>stitching</strong>, <strong>English-speaking</strong> and <strong>beautification</strong> — practical skills that open the door to employment.</p>
+        </div>
+      </article>
+      <article class="step reveal" style="--d:.12s">
+        <div class="step-media"><img width="1200" height="800" src="assets/img/boutique.jpg" alt="Colourful garments on a rack at the Aaghaaz Boutique" loading="lazy" decoding="async"></div>
+        <div class="step-body">
+          <span class="jnum">02</span>
+          <h3>Earn</h3>
+          <p><strong>Aaghaaz Boutique</strong> employs our alumni — turning extraordinary designing and stitching skills into livelihoods.</p>
+        </div>
+      </article>
+      <article class="step reveal" style="--d:.24s">
+        <div class="step-media"><img width="1200" height="800" src="assets/img/english.jpg" alt="English speaking practice in class" loading="lazy" decoding="async"></div>
+        <div class="step-body">
+          <span class="jnum">03</span>
+          <h3>Empower</h3>
+          <p>With skills and income come <strong>independence and dignity</strong> — the power to support their families and shape their own change.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROGRAMS PREVIEW ============ -->
+<section class="section" id="programs-preview">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker reveal">What we do</p>
+      <h2 class="reveal" style="--d:.08s">Programs that turn skills<br>into <span class="hl">livelihoods</span>.</h2>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card-media"><img width="1200" height="800" src="assets/img/stitching.jpg" alt="Hands guiding fabric through a sewing machine during training" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>Vocational Training</h3>
+          <p>Professional training in <strong>stitching</strong>, <strong>English-speaking</strong> and <strong>beautification</strong> — practical skills that open doors to employment and financial independence.</p>
+        </div>
+      </article>
+      <article class="card reveal" style="--d:.12s">
+        <div class="card-media"><img width="1200" height="800" src="assets/img/boutique.jpg" alt="Colourful garments on a rack at the Aaghaaz Boutique" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>Aaghaaz Boutique</h3>
+          <p>Our alumni put their extraordinary designing and stitching skills to work, creating beautiful clothes for women — employment built on everything they learned.</p>
+        </div>
+      </article>
+      <article class="card reveal" style="--d:.24s">
+        <div class="card-media"><img width="1200" height="800" src="assets/img/magazine.jpg" alt="The Aaghaaz annual magazine in a flat-lay with flowers" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>Aaghaaz Magazine</h3>
+          <p>Our annual magazine celebrates the journey — asking bold questions, challenging deep-rooted gender biases, and honouring everyone who supports the cause.</p>
+        </div>
+      </article>
+    </div>
+    <p class="reveal" style="text-align:center; margin-top:2.6rem"><a class="btn btn-dark magnet" href="programs.html">Explore all programs</a></p>
+  </div>
+</section>
+
+<!-- ============ VOICES / QUOTE ============ -->
+<section class="voices" id="voices">
+  <div class="wrap">
+    <blockquote>
+      <p id="quoteText">&ldquo;I am not free while any woman is unfree. Even when her shackles are very different from my own.&rdquo;</p>
+      <cite class="reveal">&mdash; Audre Lorde</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2 class="reveal">Be part of someone&rsquo;s <span class="hl">beginning</span>.</h2>
+    <p class="reveal" style="--d:.1s">Volunteer your time, or help keep the classrooms running — every contribution moves a woman closer to independence.</p>
+    <div class="row reveal" style="--d:.18s">
+      <a class="btn btn-pink magnet" href="get-involved.html">Get involved</a>
+      <a class="btn btn-ghost magnet" href="mailto:aaghaazbegin@gmail.com?subject=Donation%20for%20Aaghaaz%20%E2%80%93%20A%20Beginning">Donate</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Aaghaaz – A Beginning logo" width="96" height="96" loading="lazy" decoding="async">
+      <p><strong>Aaghaaz – A Beginning</strong><br>A non-profit organisation empowering less-privileged women through training, independence and dignity.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-contact">
+      <p>96, Guru Ravidass Nagar, Jalandhar,<br>Punjab 144003, India</p>
+      <p><a href="tel:+911815010011">+91 181 501 0011</a><br><a href="mailto:aaghaazbegin@gmail.com">aaghaazbegin@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <p>&copy; <span id="year">2026</span> Aaghaaz – A Beginning. Made with care in Jalandhar, Punjab.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
