@@ -64,7 +64,7 @@ h3{font-size:1.35rem}
 .btn-sm{padding:.65rem 1.4rem;min-height:44px;font-size:.9rem}
 
 /* ---------- stickers ---------- */
-.sticker{display:inline-block;font-weight:800;font-size:.8rem;letter-spacing:.06em;
+.sticker{display:inline-block;font-weight:800;font-size:.8rem;letter-spacing:.06em;color:var(--ink);
   background:#fff;border:2px solid var(--ink);border-radius:999px;padding:.5rem 1.1rem;
   box-shadow:3px 3px 0 var(--ink)}
 .sticker-1{transform:rotate(-2.5deg)}
