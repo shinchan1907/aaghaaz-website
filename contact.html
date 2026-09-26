@@ -73,7 +73,7 @@
       </div>
       <div class="form-card">
         <h3>Send us a message</h3>
-        <p class="form-note">Fill this in and your email app will open with a pre-addressed message to our team.</p>
+        <p class="form-note">Fill this in and it will reach our team directly by email.</p>
         <form id="msgForm" novalidate>
           <div class="field">
             <label for="fName">Your name</label>
@@ -86,6 +86,10 @@
           <div class="field">
             <label for="fMsg">Message</label>
             <textarea id="fMsg" name="message" required placeholder="How can we help, or how would you like to help?"></textarea>
+          </div>
+          <div class="field hp-field" aria-hidden="true">
+            <label for="fWebsite">Website</label>
+            <input id="fWebsite" name="website" type="text" autocomplete="off" tabindex="-1">
           </div>
           <p class="form-error" id="formError" role="alert" hidden>Please fill in your name, a valid email, and a message.</p>
           <button class="btn btn-pink" type="submit">Send message</button>

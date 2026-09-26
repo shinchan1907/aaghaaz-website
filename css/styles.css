@@ -31,7 +31,7 @@ body::before{
   content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
   background:url(../assets/img/pattern.jpg) center/420px repeat;
 }
-main,header.nav,footer.footer{position:relative;z-index:1;}
+main,footer.footer{position:relative;z-index:1;}
 img{max-width:100%;display:block;}
 a{color:inherit;}
 .wrap{width:var(--wrap);margin-inline:auto;}
@@ -324,6 +324,8 @@ h3{font-size:1.35rem;}
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(246,36,119,.15);}
 .field textarea{min-height:140px;resize:vertical;}
 .form-error{color:#B4004A;font-weight:700;font-size:.9rem;margin-bottom:1rem;}
+.form-ok{color:#1c7a3d;}
+.hp-field{position:absolute;left:-9999px;top:0;width:1px;height:1px;overflow:hidden;}
 .map-wrap{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:6px solid #fff;margin-top:2.8rem;}
 .map-wrap iframe{width:100%;height:420px;border:0;display:block;}
 
