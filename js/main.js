@@ -39,13 +39,39 @@
       var name = document.getElementById("fName").value.trim();
       var email = document.getElementById("fEmail").value.trim();
       var message = document.getElementById("fMsg").value.trim();
+      var hp = document.getElementById("fWebsite");
       var err = document.getElementById("formError");
       var ok = name.length > 1 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && message.length > 3;
+      err.classList.remove("form-ok");
       err.hidden = ok;
       if (!ok) return;
-      var subject = encodeURIComponent("Website enquiry from " + name);
-      var body = encodeURIComponent(message + "\n\n— " + name + " (" + email + ")");
-      window.location.href = "mailto:contact@aaghaaz.org.in?subject=" + subject + "&body=" + body;
+      var btn = msgForm.querySelector('button[type="submit"]');
+      var orig = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = "Sending…";
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: name, email: email, message: message, website: hp ? hp.value : "" })
+      }).then(function(r){
+        return r.json().then(function(j){ return { status: r.status, body: j }; });
+      }).then(function(out){
+        btn.disabled = false;
+        btn.textContent = orig;
+        err.hidden = false;
+        if (out.status === 200 && out.body.ok){
+          msgForm.reset();
+          err.classList.add("form-ok");
+          err.textContent = "Thank you! Your message has been sent to our team.";
+        } else {
+          err.textContent = (out.body && out.body.error) || "Something went wrong. Please try again.";
+        }
+      }).catch(function(){
+        btn.disabled = false;
+        btn.textContent = orig;
+        err.hidden = false;
+        err.textContent = "Could not send right now. Please email us directly at contact@aaghaaz.org.in.";
+      });
     });
   }
 })();
