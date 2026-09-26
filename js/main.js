@@ -1,14 +1,9 @@
-/* Aaghaaz v2 — static build. No animations, no motion libraries.
-   Functional UI only: footer year, mobile menu, nav scrolled state,
-   back-to-top button, and the contact mailto form. */
 (function(){
   "use strict";
 
-  /* footer year */
   var yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();
 
-  /* ---- mobile menu (instant open/close) ---- */
   var burger = document.getElementById("burger");
   var links = document.getElementById("navLinks");
   function closeMenu(){
@@ -26,7 +21,6 @@
   links.addEventListener("click", function(e){ if (e.target.closest("a")) closeMenu(); });
   document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeMenu(); });
 
-  /* ---- nav scrolled state + back-to-top visibility (instant, no transitions) ---- */
   var nav = document.getElementById("nav");
   var toTop = document.getElementById("toTop");
   function onScroll(){
@@ -38,7 +32,6 @@
   onScroll();
   toTop.addEventListener("click", function(){ window.scrollTo(0, 0); });
 
-  /* ---- mailto message form (contact page, no backend) ---- */
   var msgForm = document.getElementById("msgForm");
   if (msgForm){
     msgForm.addEventListener("submit", function(e){
