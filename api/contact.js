@@ -20,8 +20,8 @@ module.exports = async function (req, res) {
   var honeypot = String(body.website || "").trim();
 
   var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  if (honeypot || name.length < 2 || !emailOk || message.length < 4) {
-    return res.status(400).json({ ok: false, error: "Please fill in your name, a valid email, and a message." });
+  if (honeypot || !emailOk) {
+    return res.status(400).json({ ok: false, error: "Please enter a valid email address." });
   }
 
   var host = process.env.SMTP_HOST || "smtpout.secureserver.net";

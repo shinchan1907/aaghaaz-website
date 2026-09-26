@@ -41,7 +41,7 @@
       var message = document.getElementById("fMsg").value.trim();
       var hp = document.getElementById("fWebsite");
       var err = document.getElementById("formError");
-      var ok = name.length > 1 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && message.length > 3;
+      var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
       err.classList.remove("form-ok");
       err.hidden = ok;
       if (!ok) return;
